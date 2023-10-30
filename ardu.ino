@@ -15,7 +15,7 @@ void loop() {
     unsigned long duration = (endTime - startTime) / 1;
     totalTime+=duration;
     if (duration>65){
-    	Serial.println("Tempo de faixa " + String(duration) + " microssegundos. Tempo total: " + String(totalTime) + " microssegundos");
+    	Serial.println("Tempo de faixa " + String(duration) + " milissegundos. Tempo total: " + String(totalTime) + " milissegundos");
 		startTime = 0;
     	startTime = millis();
     }
