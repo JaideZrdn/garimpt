@@ -1,8 +1,9 @@
-const int ldrPin = A0;  
+const int ldrPin = A0;
 const int limiar = 475; 
 const int limiar2 = 490;
 unsigned long startTime = 0;  
-unsigned long totalTime = 0;  
+unsigned long totalTime = 0;
+
 void setup() {
    pinMode(ldrPin, INPUT);
    Serial.begin(9600);
@@ -15,11 +16,11 @@ void loop() {
     unsigned long duration = (endTime - startTime) / 1;
     totalTime+=duration;
     if (duration>65){
-    	Serial.println("Tempo de faixa " + String(duration) + " milissegundos. Tempo total: " + String(totalTime) + " milissegundos");
+    	Serial.println("Tempo de faixa " + String(duration) + " milissegundos.");
 		startTime = 0;
     	startTime = millis();
     }
   }
-  Serial.println(valorldr);
-  delay(100);
+  //Serial.println(valorldr);
+  delay(1);
 }
